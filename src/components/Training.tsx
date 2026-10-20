@@ -26,7 +26,7 @@ export default function Training() {
 
                 <div className="relative">
                     <img
-                        src="/images/training/boxing-training.jpg"
+                        src="/images/text.png"
                         alt="Entrenamiento técnico de boxeo en Ataraxia"
                         className="aspect-[4/3] w-full object-cover grayscale-[25%]"
                         loading="lazy"

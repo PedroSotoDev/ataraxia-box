@@ -7,7 +7,7 @@ export default function Club() {
             <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 lg:gap-16">
                 <div className="relative order-2 md:order-1">
                     <img
-                        src="/images/club/boxing-team.jpg"
+                        src="/images/text.png"
                         alt="El equipo de Ataraxia compartiendo el entrenamiento"
                         className="aspect-[4/3] w-full object-cover"
                         loading="lazy"
@@ -24,7 +24,7 @@ export default function Club() {
                     </p>
 
                     <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
-                        Fuertes juntos. Dentro y fuera.
+                        Una familia fuerte
                     </h2>
 
                     <p className="mt-6 leading-7 text-white/60">
