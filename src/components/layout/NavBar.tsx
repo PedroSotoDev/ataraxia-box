@@ -17,7 +17,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <a href="#inicio" className="group flex flex-col items-start" aria-label="Ataraxia, inicio">
                 <div className="flex flex-col items-center">
-                    <img src="/images/ataraxia-boxing-logo.svg" alt="Logo de Ataraxia Boxing Club" className="h-auto w-20 object-contain sm:w-24" />
+                    <img src={`${import.meta.env.BASE_URL}/images/ataraxia-boxing-logo.svg`} alt="Logo de Ataraxia Boxing Club" className="h-auto w-20 object-contain sm:w-24" />
 
                 </div>
                 </a>

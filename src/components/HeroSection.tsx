@@ -4,7 +4,7 @@ export default function HeroSection() {
         <section
             id="inicio"
             className="relative flex min-h-[75vh] items-center overflow-hidden bg-cover bg-center px-5 py-24 sm:px-8"
-            style={{ backgroundImage: "url('/images/banner.png')" }}
+            style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/banner.png')` }}
         >
             {/* Capa oscura para mejorar la legibilidad */}
             <div className="absolute inset-0 bg-black/65" />

@@ -7,7 +7,7 @@ export default function Club() {
             <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 lg:gap-16">
                 <div className="relative order-2 md:order-1">
                     <img
-                        src="/images/text.png"
+                        src={`${import.meta.env.BASE_URL}/images/text.png`}
                         alt="El equipo de Ataraxia compartiendo el entrenamiento"
                         className="aspect-[4/3] w-full object-cover"
                         loading="lazy"
