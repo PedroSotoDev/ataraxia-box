@@ -24,7 +24,7 @@ export default function Club() {
                     </p>
 
                     <h2 className="text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
-                        Una familia fuerte.
+                        Una familia fuerte
                     </h2>
 
                     <p className="mt-6 leading-7 text-white/60">
