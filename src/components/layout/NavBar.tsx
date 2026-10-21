@@ -16,10 +16,7 @@ export default function Navbar() {
             <nav className="mx-auto flex min-h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
                 {/* Logo */}
                 <a href="#inicio" className="group flex flex-col items-start" aria-label="Ataraxia, inicio">
-                <div className="flex flex-col items-center">
-                    <img src={`${import.meta.env.BASE_URL}/images/ataraxia-boxing-logo.svg`} alt="Logo de Ataraxia Boxing Club" className="h-auto w-20 object-contain sm:w-24" />
-
-                </div>
+                        <img src={`${import.meta.env.BASE_URL}/images/ataraxia-boxing-logo.svg`} alt="Logo de Ataraxia Boxing Club" className="h-auto w-20 object-contain sm:w-24 scale-80"/>
                 </a>
 
                 {/* Navegación de escritorio */}

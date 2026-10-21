@@ -1,27 +1,57 @@
+import { ArrowUpRight } from "lucide-react";
+import ImageSlider, { type ImageSlide } from "./ImageSlider";
 
-export default function HeroSection() {
+const trainingSlides: ImageSlide[] = [
+    {
+        title: "Pliometría",
+        description: "Explosividad y potencia",
+        image: "images/entrenamiento/pliometria.jpg",
+        href: "/entrenamiento#pliometria",
+    },
+    {
+        title: "Cardio",
+        description: "Resistencia y condición física",
+        image: "images/entrenamiento/cardio.jpg",
+        href: "/entrenamiento#cardio",
+    },
+    {
+        title: "Musculación",
+        description: "Fuerza y preparación física",
+        image: "images/entrenamiento/musculacion.jpg",
+        href: "/entrenamiento#musculacion",
+    },
+    {
+        title: "Sparring",
+        description: "Técnica aplicada en combate",
+        image: "images/entrenamiento/sparring.jpg",
+        href: "/entrenamiento#sparring",
+    },
+];
+
+export default function Training() {
     return (
-        <section
-            id="inicio"
-            className="relative flex min-h-[75vh] items-center overflow-hidden bg-cover bg-center px-5 py-24 sm:px-8"
-            style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/banner.png')` }}
-        >
-            {/* Capa oscura para mejorar la legibilidad */}
-            <div className="absolute inset-0 bg-black/65" />
+        <section id="entrenamiento" className="border-t border-white/10 px-5 py-20 sm:px-8 lg:py-28">
+            <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 lg:gap-16">
+                <div>
+                    <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#C8102E]">
+                        Técnica · Disciplina · Evolución
+                    </p>
 
-            {/* Contenido */}
-            <div className="relative z-10 mx-auto w-full max-w-7xl">
-                <p className="mb-5 text-xs font-bold uppercase tracking-[0.3em] text-[#C8102E]">
-                    Boxing Club · Puños Fuertes · Mente Firme
-                </p>
+                    <h2 className="max-w-xl text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
+                        Cada golpe tiene un propósito.
+                    </h2>
 
-                <h1 className="max-w-4xl text-5xl font-black uppercase leading-[0.95] sm:text-7xl lg:text-8xl">
-                    El carácter se forja bajo presión.
-                </h1>
+                    <p className="mt-6 max-w-lg leading-7 text-white/60">
+                        Desarrolla tu técnica, supera tus límites y prepárate para cada desafío.
+                    </p>
 
-                <p className="mt-6 max-w-xl text-lg leading-7 text-white/60">
-                    Entrenamiento, equipo y noches de boxeo. Descubre todo lo que se vive dentro y fuera del ring.
-                </p>
+                    <a href="/entrenamiento" className="mt-8 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wider transition-colors hover:text-[#C8102E]">
+                        Descubre el entrenamiento
+                        <ArrowUpRight size={18} />
+                    </a>
+                </div>
+
+                <ImageSlider slides={trainingSlides} />
             </div>
         </section>
     );
