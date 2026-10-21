@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -19,8 +18,6 @@ export default function ImageSlider({ slides, className = "" }: ImageSliderProps
 
     if (slides.length === 0) return null;
 
-    const current = slides[activeIndex];
-
     const changeSlide = (direction: number): void => {
         setActiveIndex((prev) => (prev + direction + slides.length) % slides.length);
     };
@@ -28,29 +25,47 @@ export default function ImageSlider({ slides, className = "" }: ImageSliderProps
     return (
         <div className={`relative ${className}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
-                <a href={current.href} className="group absolute inset-0 block">
-                    <img
-                        key={current.image}
-                        src={`${import.meta.env.BASE_URL}${current.image.replace(/^\/+/, "")}`}
-                        alt={current.title}
-                        className="h-full w-full object-cover grayscale-[25%] transition duration-500 group-hover:scale-105"
-                        loading="lazy"
-                    />
+                {/* Pista deslizante: todas las slides en fila */}
+                <div
+                    className="flex h-full w-full transition-transform duration-500 ease-out motion-reduce:transition-none"
+                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                >
+                    {slides.map((slide, index) => {
+                        const isActive = index === activeIndex;
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                        return (
+                            <a
+                                key={slide.title}
+                                href={slide.href}
+                                aria-hidden={!isActive}
+                                tabIndex={isActive ? undefined : -1}
+                                className="group relative block h-full w-full shrink-0"
+                            >
+                                <img
+                                    src={`${import.meta.env.BASE_URL}${slide.image.replace(/^\/+/, "")}`}
+                                    alt={slide.title}
+                                    className="h-full w-full object-cover grayscale-[25%] transition duration-500 group-hover:scale-105"
+                                    loading="lazy"
+                                />
 
-                    <div className="absolute bottom-0 left-0 p-5 sm:p-7">
-                        <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C8102E]">
-                            {String(activeIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-                        </p>
-                        <h3 className="text-2xl font-black uppercase sm:text-3xl">
-                            {current.title}
-                        </h3>
-                        <p className="mt-1 text-sm text-white/70">
-                            {current.description}
-                        </p>
-                    </div>
-                </a>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+
+                                <div className="absolute bottom-0 left-0 p-5 sm:p-7">
+                                    <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C8102E]">
+                                        {String(index + 1).padStart(2, "0")} /{" "}
+                                        {String(slides.length).padStart(2, "0")}
+                                    </p>
+                                    <h3 className="text-2xl font-black uppercase sm:text-3xl">
+                                        {slide.title}
+                                    </h3>
+                                    <p className="mt-1 text-sm text-white/70">
+                                        {slide.description}
+                                    </p>
+                                </div>
+                            </a>
+                        );
+                    })}
+                </div>
 
                 {slides.length > 1 && (
                     <div className="absolute right-4 top-4 z-10 flex gap-2">
@@ -83,7 +98,11 @@ export default function ImageSlider({ slides, className = "" }: ImageSliderProps
                             onClick={() => setActiveIndex(index)}
                             aria-label={`Mostrar ${slide.title}`}
                             aria-current={index === activeIndex ? "true" : undefined}
-                            className={`h-1 flex-1 transition-colors ${index === activeIndex ? "bg-[#C8102E]" : "bg-white/20 hover:bg-white/50"}`}
+                            className={`h-1 flex-1 transition-colors ${
+                                index === activeIndex
+                                    ? "bg-[#C8102E]"
+                                    : "bg-white/20 hover:bg-white/50"
+                            }`}
                         />
                     ))}
                 </div>

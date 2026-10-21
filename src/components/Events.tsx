@@ -3,7 +3,7 @@ import { ArrowUpRight, CalendarDays, Ticket } from "lucide-react";
 
 export default function Events() {
     return (
-        <section id="eventos" className="relative overflow-hidden bg-[#181819] px-5 py-20 sm:px-8 lg:py-28">
+        <section id="eventos" className="relative overflow-hidden bg-[#181819] px-5 py-10 sm:px-8 lg:py-28">
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,17,18,0.98)_0%,rgba(16,17,18,0.82)_55%,rgba(16,17,18,0.45)_100%)]" />
 
             <div className="relative mx-auto max-w-7xl">

@@ -3,7 +3,7 @@ import { ArrowUpRight, Users } from "lucide-react";
 
 export default function Club() {
     return (
-        <section id="club" className="px-5 py-20 sm:px-8 lg:py-28">
+        <section id="club" className="px-5 py-10 sm:px-8 lg:py-28">
             <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 lg:gap-16">
                 <div className="relative order-2 md:order-1">
                     <img

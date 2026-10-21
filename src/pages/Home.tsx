@@ -1,4 +1,5 @@
 import HeroSection from "../components/HeroSection";
+import ClubStats from "../components/ClubStats";
 import Training from "../components/Training";
 import Events from "../components/Events";
 import Club from "../components/Club";
@@ -9,6 +10,7 @@ export default function Home() {
         <>
         
             <HeroSection />
+            <ClubStats/>
             <Training/>
             <Events />
             <Club />

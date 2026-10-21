@@ -3,7 +3,7 @@ import { ArrowUpRight, MapPin, MessageCircle } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contacto" className="border-t border-white/10 bg-[#181819] px-5 py-20 sm:px-8 lg:py-24">
+        <section id="contacto" className="border-t border-white/10 bg-[#181819] px-5 py-10 sm:px-8 lg:py-24">
             <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
                 <div>
                     <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#C8102E]">
