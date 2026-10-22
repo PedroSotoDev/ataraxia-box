@@ -12,9 +12,9 @@ export default function Home() {
             <HeroSection />
             <ClubStats/>
             <Training/>
-            <Events />
-            <Club />
-            <Contact />
+            <Events/>
+            <Club/>
+            <Contact/>
         </>
     );
 }

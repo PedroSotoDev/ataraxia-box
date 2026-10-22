@@ -14,11 +14,11 @@ export default function Events() {
                 <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
                     <div>
                         <h2 className="max-w-3xl text-4xl font-black uppercase leading-tight sm:text-6xl lg:text-7xl">
-                            El ring. La gente. La noche.
+                            Vive el boxeo de cerca.
                         </h2>
 
                         <p className="mt-6 max-w-xl leading-7 text-white/65">
-                            Vive el boxeo de cerca. Combates, ambiente y una experiencia que reúne a los amantes del deporte alrededor del ring.
+                            Combates, ambiente y una experiencia que reúne a los amantes del deporte alrededor del ring cada semana.
                         </p>
                     </div>
 

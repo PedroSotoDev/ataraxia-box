@@ -1,24 +1,29 @@
 const stats = [
-    { value: "10+", label: "Años de experiencia " },
-    { value: "+20", label: "Peleadores entrenados" },
-    { value: "Todas", label: "Las edades y niveles" },
+    { value: "Pro",   label: "Entrenador federado" },
+    { value: "4+",    label: "Boxeadores activos" },
+    { value: "Todas", label: "Edades y niveles" },
 ];
 
 export default function ClubStats() {
     return (
-        <section className="border-y border-white/10 bg-[#111111] px-3 py-10 sm:px-8 sm:py-14">
-            <div className="mx-auto grid max-w-6xl grid-cols-3 gap-2 sm:gap-6">
-                {stats.map((stat, index) => (
-                    <div key={stat.label} className="relative flex min-w-0 flex-col items-center text-center">
-                        {index > 0 && <span className="absolute -left-1 top-1/2 hidden h-12 -translate-y-1/2 border-l border-white/10 sm:block" />}
-                        <span className="text-2xl font-black tracking-tighter text-[#C8102E] sm:text-5xl lg:text-6xl">
-                            {stat.value}
-                        </span>
-                        <h3 className="mt-2 text-[10px] font-extrabold uppercase leading-tight tracking-wide text-white sm:text-sm sm:tracking-widest">
-                            {stat.label}
-                        </h3>
-                    </div>
-                ))}
+        <section className="bg-[#111111] px-3 pt-8 pb-0 sm:px-8 sm:py-10">
+            <div className="mx-auto max-w-6xl">
+                {/* divide-x = border-left real en celdas 2 y 3. Sin gap, sin fondo, sin sangrado */}
+                <div className="grid grid-cols-3 divide-x divide-white/20">
+                    {stats.map((stat) => (
+                        <div
+                            key={stat.label}
+                            className="flex flex-col items-center justify-center px-2 py-4 text-center sm:px-4 sm:py-6"
+                        >
+                            <span className="text-[28px] font-black leading-none tracking-tighter text-[#C8102E] sm:text-3xl lg:text-4xl">
+                                {stat.value}
+                            </span>
+                            <span className="mt-1.5 text-[11px] font-bold uppercase leading-[1.15] tracking-wide text-white/85 sm:mt-2 sm:text-xs sm:tracking-widest">
+                                {stat.label}
+                            </span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

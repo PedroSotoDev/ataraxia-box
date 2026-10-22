@@ -30,13 +30,9 @@ const trainingSlides: ImageSlide[] = [
 
 export default function Training() {
     return (
-        <section id="entrenamiento" className="border-t border-white/10 px-5 py-10 sm:px-8 lg:py-28">
+        <section id="entrenamiento" className="px-5 py-8 sm:px-8 lg:py-28">
             <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 lg:gap-16">
                 <div>
-                    <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#C8102E]">
-                        Técnica · Disciplina · Evolución
-                    </p>
-
                     <h2 className="max-w-xl text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
                         Cada golpe tiene un propósito.
                     </h2>
