@@ -3,28 +3,28 @@ import ImageSlider, { type ImageSlide } from "./ImageSlider";
 
 const trainingSlides: ImageSlide[] = [
     {
-        title: "Pliometría",
-        description: "Explosividad y potencia",
-        image: "images/text.png",
-        href: "/entrenamiento#pliometria",
-    },
-    {
-        title: "Cardio",
-        description: "Resistencia y condición física",
-        image: "images/text.png",
-        href: "/entrenamiento#cardio",
+        title: "Sparring",
+        description: "Técnica aplicada en combate",
+        image: "images/s.png",
+        href: "/entrenamiento#sparring",
     },
     {
         title: "Musculación",
         description: "Fuerza y preparación física",
-        image: "images/text.png",
+        image: "images/m.png",
         href: "/entrenamiento#musculacion",
     },
     {
-        title: "Sparring",
-        description: "Técnica aplicada en combate",
-        image: "images/text.png",
-        href: "/entrenamiento#sparring",
+        title: "Cardio",
+        description: "Resistencia y condición física",
+        image: "images/c.png",
+        href: "/entrenamiento#cardio",
+    },
+    {
+        title: "Pliometría",
+        description: "Explosividad y potencia",
+        image: "images/p.png",
+        href: "/entrenamiento#pliometria",
     },
 ];
 
